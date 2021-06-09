@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  justify-content: space-between;
+  color: $color-black-light-100;
+  border-bottom: 1px solid $color-black-light-200;
+
+  &__logo {
+    width: 100px;
+    height: auto;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+  }
+
+  &__actions {
+    color: $color-white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &--plus {
+      position: relative;
+      margin-right: 1rem;
+      padding-right: 1rem;
+
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 7px;
+        width: 1px;
+        height: 1rem;
+        background-color: $color-white;
+      }
+    }
+
+    &--notifications {
+      position: relative;
+      margin-right: 1rem;
+
+      span {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: $color-red;
+      }
+    }
+
+    &--profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

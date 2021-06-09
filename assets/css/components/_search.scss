@@ -1,0 +1,41 @@
+.search {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__wrapper {
+    position: relative;
+    width: 50%;
+
+    &--input {
+      background: transparent;
+      border: 0;
+      outline: none;
+      width: 100%;
+      font-size: 1.2rem;
+      height: 40px;
+      border-radius: 4px;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &--btn {
+      color: rgba($color-black-light-100, 0.2);
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      font-size: 1.4rem;
+      left: 1rem;
+      top: 0.2rem;
+      font-weight: bold;
+      display: none;
+    }
+  }
+}

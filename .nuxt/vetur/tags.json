@@ -1,0 +1,14 @@
+{
+  "GridGifs": {
+    "description": "Auto imported from components/GridGifs.vue"
+  },
+  "MainHeader": {
+    "description": "Auto imported from components/MainHeader.vue"
+  },
+  "MainTitle": {
+    "description": "Auto imported from components/MainTitle.vue"
+  },
+  "Search": {
+    "description": "Auto imported from components/Search.vue"
+  }
+}
