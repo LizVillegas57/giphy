@@ -15,7 +15,7 @@
   import MainTitle from '~/components/MainTitle';
 
   const axios = require("axios");
-  let url = 'https://api.giphy.com/v1/gifs/trending?api_key=Lm6rXGuwq3Afa3YIOpC1EmKNd6pFaa3m';
+  let url = `https://api.giphy.com/v1/gifs/trending?api_key=${process.env.APIKEY}`;
 
   export default {
     name: 'Grid',
