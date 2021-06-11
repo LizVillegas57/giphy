@@ -54,7 +54,6 @@
     },
     async asyncData({ params }){
       const { data } = await axios.get(`https://api.giphy.com/v1/gifs/${params.gif}?api_key=${process.env.APIKEY}`);
-      console.log(data.data)
       return { item: data.data };
     },
   }
