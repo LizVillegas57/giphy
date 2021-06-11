@@ -32,16 +32,11 @@
 </template>
 
 <script>
-  import MainHeader from '~/components/MainHeader';
-  
   const moment = require("moment");
   const axios = require("axios");
 
   export default {
     name: 'Gifs',
-    components: {
-      MainHeader
-    },
     head() {
       return {
         title: "Gif Selection"
