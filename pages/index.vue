@@ -53,7 +53,6 @@
         this.mainTitle = result;
       },
       onFetchTotal(result){
-        console.log(result)
         this.total = result;
       },
       removeBodyClass(addRemoveClass, className) {
