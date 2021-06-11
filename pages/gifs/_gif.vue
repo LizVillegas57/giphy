@@ -32,16 +32,11 @@
 </template>
 
 <script>
-  import MainHeader from '~/components/MainHeader';
-  
   const moment = require("moment");
   const axios = require("axios");
 
   export default {
     name: 'Gifs',
-    components: {
-      MainHeader
-    },
     head() {
       return {
         title: "Gif Selection"
@@ -53,8 +48,7 @@
       }
     },
     async asyncData({ params }){
-      const { data } = await axios.get(`https://api.giphy.com/v1/gifs/${params.gif}?api_key=Lm6rXGuwq3Afa3YIOpC1EmKNd6pFaa3m`);
-      console.log(data.data)
+      const { data } = await axios.get(`https://api.giphy.com/v1/gifs/${params.gif}?api_key=${process.env.APIKEY}`);
       return { item: data.data };
     },
   }

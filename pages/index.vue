@@ -3,28 +3,17 @@
     <main-header />
     <search @fetch-gifs="onFetch" @fetch-title="onFetchTitle" @fetch-total="onFetchTotal"/>
     <main-title :mainTitle="mainTitle" :total="total" />
-    <grid-gifs :trending="trending" />
+    <grid-gifs :gifs="trending" />
     <div class="overlay" @click="removeBodyClass('removeClass', 'active')"></div>
   </main>
 </template>
 
 <script>
-  import GridGifs from '~/components/GridGifs';
-  import Search from '~/components/Search';
-  import MainHeader from '~/components/MainHeader';
-  import MainTitle from '~/components/MainTitle';
-
   const axios = require("axios");
-  let url = 'https://api.giphy.com/v1/gifs/trending?api_key=Lm6rXGuwq3Afa3YIOpC1EmKNd6pFaa3m';
+  let url = `https://api.giphy.com/v1/gifs/trending?api_key=${process.env.APIKEY}`;
 
   export default {
     name: 'Grid',
-    components: {
-      GridGifs,
-      Search,
-      MainHeader,
-      MainTitle
-    },
     head() {
       return {
         title: "Giphy Search"
@@ -53,7 +42,6 @@
         this.mainTitle = result;
       },
       onFetchTotal(result){
-        console.log(result)
         this.total = result;
       },
       removeBodyClass(addRemoveClass, className) {

@@ -1,5 +1,12 @@
 # Giphy
 
+## Configuration
+Create a new file named `.env` on the root of your project with your APIKEY
+
+```
+APIKEY=<insert your apikey>
+```
+
 ## Build Setup
 
 ```bash
